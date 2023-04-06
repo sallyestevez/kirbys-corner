@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Carme&family=Coiny&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ee84b4;
+  font-family: "Carme", sans-serif;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  padding-bottom: 15px;
+}
+
+.header {
+  /* background-color: #3f8ce2; */
+  display: flex;
+  font-family: "Coiny", cursive;
+  font-size: 16px;
+  justify-content: space-around;
+}
+
+a,
+a:visited,
+a:active {
+  color: #291278;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header a {
+  color: #291278;
+  float: left;
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: #3f48d0;
+}
+
+.homepageTitle {
+  color: white;
+  font-family: "Coiny", cursive;
+}
+
+.GameTitle {
+  color: #3f48d0;
+  font-family: "Coiny", cursive;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  color: #3f48d0;
+  font-family: "Coiny", cursive;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  color: #d43d5e;
+  font-family: "Coiny", cursive;
+  font-size: 28px;
+}
+
+.HomeText p {
+  color: #291278;
+  font-size: 22px;
+}
+
+.banner {
+  align-content: flex-end;
+  background-image: url("images/Friends'_Getaway.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  opacity: 0.7;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.RobobotBanner {
+  align-content: flex-end;
+  background-image: url("images/Robobot_Memories.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  opacity: 0.7;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.StarAlliesBanner {
+  align-content: flex-end;
+  background-image: url("images/Chasing_Our_Dreams.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  opacity: 0.7;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.LearnMore {
+  background-color: #fee35b;
+  border-color: #fee35b;
+  border-radius: 5px;
+  color: #3f48d0;
+  font-family: "Coiny", cursive;
+  font-size: 18px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 150px;
+}
+
+.KirbyPageImageLarge {
+  display: flex;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.KirbyPageImageMedium {
+  display: flex;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.KirbyPageImageSmall {
+  display: flex;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainGridContainer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 2vmin;
+  grid-row-gap: 2vmin;
+  padding: 0px 10vmin 0px 10vmin;
+}
+
+.subGridContainer {
+  padding-bottom: 25px;
+}
+
+.wideImage {
+  width: 50%;
+  max-width: auto;
+}
+
+.homeHeadline {
+  color: #3f48d0;
+  font-family: "Coiny", cursive;
+  font-size: 8vmin;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.homeSubheader {
+  color: #d43d5e;
+  font-family: "Coiny", cursive;
+  font-size: 6vmin;
+  text-align: center;
+}
+
+.sectionHeadline {
+  color: #3f48d0;
+  font-family: "Coiny", cursive;
+  font-size: 8vmin;
+  padding-top: 25px;
+}
+
+.sectionSubheader {
+  color: #3f48d0;
+  font-family: "Coiny", cursive;
+  font-size: 6vmin;
+  padding-top: 15px;
+}
+
+p {
+  line-height: 2em;
+}
+
+.verticalCenter {
+  display: flex;
+  align-items: center;
+}
+
+.KirbyPageBodyText p,
+.CharacterPageBodyText p,
+.GamePageBodyText p {
+  color: #291278;
+  font-size: 22px;
+  text-align: left;
+}
+
+.CharacterPageImage {
+  max-height: 300px;
+}
+
+.item-2x {
+  grid-column-end: span 2;
+}
+
+.item-2x2 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+.item-8x {
+  font-weight: bold;
+  grid-column-end: span 8;
+}
+
+.item-4x {
+  font-weight: bold;
+  grid-column-end: span 4;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .mainGridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .item-2x,
+  .item-2x2,
+  .item-8x,
+  .item-4x {
+    grid-column-end: span 1;
+  }
+
+  .item-4x {
+    padding-bottom: 0px;
+    text-align: center;
+  }
+
+  .KirbyPageImageLarge {
+    display: flex;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
