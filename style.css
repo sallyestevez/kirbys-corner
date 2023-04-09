@@ -5,7 +5,7 @@
 }
 
 html {
-  background-color: #ee84b4;
+  background-color: rgba(238, 134, 181, 0.75);
   font-family: "Carme", sans-serif;
   height: 100%;
   margin: 0px;
@@ -17,7 +17,6 @@ body {
 }
 
 .header {
-  /* background-color: #3f8ce2; */
   display: flex;
   font-family: "Coiny", cursive;
   font-size: 16px;
@@ -83,6 +82,8 @@ h3 {
 .HomeText p {
   color: #291278;
   font-size: 22px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .banner {
@@ -183,7 +184,7 @@ h3 {
 .homeHeadline {
   color: #3f48d0;
   font-family: "Coiny", cursive;
-  font-size: 8vmin;
+  /* font-size: 8vmin; */
   padding-top: 10px;
   text-align: center;
 }
@@ -191,7 +192,7 @@ h3 {
 .homeSubheader {
   color: #d43d5e;
   font-family: "Coiny", cursive;
-  font-size: 6vmin;
+  /* font-size: 6vmin; */
   text-align: center;
 }
 
@@ -213,8 +214,15 @@ h3 {
   padding-top: 15px;
 }
 
-p {
-  line-height: 2em;
+.FeaturedGame {
+  margin-bottom: 50px;
+}
+
+.ContentSection {
+  background-color: rgba(63, 140, 226, 0.5);
+  margin: 20px;
+  padding: 10px 25px 25px 25px;
+  border-radius: 10px;
 }
 
 .verticalCenter {
@@ -251,19 +259,8 @@ p {
 .item-4x {
   font-weight: bold;
   grid-column-end: span 4;
-  padding-bottom: 25px;
+  /* padding-bottom: 25px; */
   text-align: center;
-}
-
-.solutions {
-  /* background-color: rgba(115, 153, 178, .75); */
-  background-color: #79c3d3;
-  margin: 20px;
-  padding-top: 1px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
 }
 
 @media screen and (max-width: 600px) {
