@@ -56,8 +56,8 @@ a:active {
 h1,
 h2,
 h3 {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -168,7 +168,6 @@ h3 {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 2vmin;
-  /* grid-row-gap: 2vmin; */
   padding: 0px 10vmin 0px 10vmin;
 }
 
@@ -184,7 +183,6 @@ h3 {
 .homeHeadline {
   color: #3f48d0;
   font-family: "Coiny", cursive;
-  /* font-size: 8vmin; */
   padding-top: 10px;
   text-align: center;
 }
@@ -192,15 +190,13 @@ h3 {
 .homeSubheader {
   color: #d43d5e;
   font-family: "Coiny", cursive;
-  /* font-size: 6vmin; */
   text-align: center;
 }
 
 .sectionHeadline {
   color: #3f48d0;
   font-family: "Coiny", cursive;
-  /* font-size: 8vmin; */
-  /* padding-top: 25px; */
+  padding-top: 25px;
 }
 
 .HomePageImage {
@@ -210,7 +206,6 @@ h3 {
 .sectionSubheader {
   color: #3f48d0;
   font-family: "Coiny", cursive;
-  /* font-size: 6vmin; */
   padding-top: 25px;
 }
 
@@ -220,14 +215,14 @@ h3 {
 
 .ContentSection {
   background-color: rgba(63, 140, 226, 0.5);
+  border-radius: 10px;
   margin: 20px;
   padding: 10px 25px 25px 25px;
-  border-radius: 10px;
 }
 
 .verticalCenter {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .KirbyPageBodyText p,
@@ -235,9 +230,9 @@ h3 {
 .GamePageBodyText p {
   color: #291278;
   font-size: 22px;
-  text-align: left;
-  padding-top: 0px;
   margin-top: 0px;
+  padding-top: 0px;
+  text-align: left;
 }
 
 .CharacterPageImage {
@@ -267,8 +262,8 @@ h3 {
 
 .AbilityTitle {
   padding-left: 25px;
-  padding-top: 25px;
   padding-bottom: 0px;
+  padding-top: 25px;
   margin-bottom: 0px;
 }
 
@@ -283,12 +278,11 @@ h3 {
 .content {
   display: flex;
   width: 50%;
-  /* padding-left: 25px; */
 }
 
 .content > p {
-  font-size: 20px;
   color: #291278;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -304,10 +298,13 @@ h3 {
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: rgba(212, 61, 94, 0.001);
-  float: left;
   border: none;
-  outline: none;
+  color: #291278;
   cursor: pointer;
+  float: left;
+  font-family: "Coiny", cursive;
+  font-size: 24px;
+  outline: none;
   padding: 14px 16px;
   transition: 0.3s;
 }
@@ -325,10 +322,10 @@ h3 {
 /* Style the tab content */
 .tabcontent {
   background-color: rgba(238, 134, 181, 0.5);
-  display: none;
-  padding: 6px 12px;
   border: 2px dotted rgba(212, 61, 94, 1);
   border-top: none;
+  display: none;
+  padding: 6px 12px;
 }
 
 @media screen and (max-width: 600px) {
