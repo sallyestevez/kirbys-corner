@@ -25,7 +25,8 @@
       <div class="item-4x">
         <img class="item-4x wideImage" src="../images/Kirby.png" alt="Kirby">
       </div>
-      <h2 class="item-8x sectionSubheader">Background</h2>
+
+        <h2 class="item-8x sectionSubheader">Background</h2>
       <div class="item-8x KirbyPageBodyText">
         <p>Kirby has been in over 30 games, starting with Kirby's Dream Land in 1992. 
           Since then, he has starred in Kirby's Adventure (1993), Kirby Super Star (1996), 
@@ -53,54 +54,77 @@
         <img class="KirbyPageImageSmall" src="../images/SleepyKirby.png" alt="Sleepy Kirby"></img>
       </div>
       <h2 class="item-8x sectionSubheader">Skills and Abilities</h2>
-      <div class="item-4x KirbyPageBodyText">
-        <img class="KirbyPageImageMedium" src="../images/Inhale.png" alt="Kirby inhaling"></img>
+      <!-- code based on https://www.w3schools.com/howto/howto_js_tabs.asp -->
+      <div class="item-8x tab">
+        <button class="tablinks" onclick="openAbility(event, 'Inhale')" id="defaultOpen">Inhale</button>
+        <button class="tablinks" onclick="openAbility(event, 'Copy Abilities')">Copy Abilities</button>
+        <button class="tablinks" onclick="openAbility(event, 'Helpers')">Helpers</button>
+        <button class="tablinks" onclick="openAbility(event, 'Water Gun')">Water Gun</button>
+        <button class="tablinks" onclick="openAbility(event, 'Hover')">Hover</button>
       </div>
-      <div class="item-4x KirbyPageBodyText">
-        <h3>Inhale</h3>
-        <p>Kirby's inhale, introduced in Kirby's Dream Land, is one of his most well-known abilities. 
-          As the name implies, Kirby can inhale enemies and objects. He can either swallow what he 
-          inhaled or spit it out, which is known as a star spit. In later games, swallowing certain 
-          enemies gives Kirby a Copy Ability.
-        </p>
+      <div id="Inhale" class="item-8x tabcontent">
+        <h3 class="AbilityTitle">Inhale</h3>
+        <div class="ability">
+          <div class="content">
+            <p>Kirby's inhale, introduced in Kirby's Dream Land, is one of his most well-known abilities. 
+              As the name implies, Kirby can inhale enemies and objects. He can either swallow what he 
+              inhaled or spit it out, which is known as a star spit. In later games, swallowing certain 
+              enemies gives Kirby a Copy Ability.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/Inhale.png" alt="Kirby inhaling"></img>
+          </div>
+        </div>
       </div>
-      <div class="item-4x KirbyPageBodyText">
-        <h3>Copy Abilities</h3>
-        <p>Copy Abilities were first introduced in Kirby's Adventure. After inhaling and swallowing certain
+      <div id="Copy Abilities" class="item-8x tabcontent">
+        <h3 class="AbilityTitle">Copy Abilities</h3>
+        <div class="ability">
+          <div class="content">
+            <p>Copy Abilities were first introduced in Kirby's Adventure. After inhaling and swallowing certain
           enemies with special powers, Kirby can also gain those powers. There are over 40 Copy Abilities in 
           the series, and each Copy Ability has a unique moveset! Starting in Kirby Super Star, Kirby also gets
-          a unique hat for each Copy Ability.
-        </p>
+          a unique hat for each Copy Ability.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/CopyAbility.png" alt="Kirby using Beam, a Copy Ability"></img>
+          </div>
+        </div>
       </div>
-      <div class="item-4x KirbyPageBodyText">
-        <img class="KirbyPageImageMedium" src="../images/CopyAbility.png" alt="Kirby using Beam, a Copy Ability"></img>
+      <div id="Helpers" class="item-8x tabcontent">
+        <h3 class="AbilityTitle">Helpers</h3>
+        <div class="ability">
+          <div class="content">
+            <p>In Kirby Super Star (+ Super Star Ultra) and Kirby Star Allies, Kirby can create a Helper by giving 
+          up a Copy Ability! Helpers are allied versions of the previously swallowed enemy.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/Helper.jpg" alt="Kirby with Helpers"></img>
+          </div>
+        </div>
       </div>
-      <div class="item-4x KirbyPageBodyText">
-        <img class="KirbyPageImageMedium" src="../images/Helper.jpg" alt="Kirby with Helpers"></img>
+      <div id="Water Gun" class="item-8x tabcontent">
+        <h3 class="AbilityTitle">Water Gun</h3>
+        <div class="ability">
+          <div class="content">
+            <p>Kirby can't use most of his Copy Abilities underwater, but he can use a water gun attack. 
+              Kirby shoots a bubble of water in the direction of the player's choice.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/WaterGun.png" alt="Kirby using Water Gun"></img>
+          </div>
+        </div>
       </div>
-      <div class="item-4x KirbyPageBodyText">
-        <h3>Helpers</h3>
-        <p>In Kirby Super Star (+ Super Star Ultra) and Kirby Star Allies, Kirby can create a Helper by giving 
-          up a Copy Ability! Helpers are allied versions of the previously swallowed enemy.
-        </p>
-      </div>
-      <div class="item-4x KirbyPageBodyText">
-        <h3>Water Gun</h3>
-        <p>Kirby can't use most of his Copy Abilities underwater, but he can use a water gun attack. 
-          Kirby shoots a bubble of water in the direction of the player's choice.
-        </p>
-      </div>
-      <div class="item-4x KirbyPageBodyText">
-        <img class="KirbyPageImageMedium" src="../images/WaterGun.png" alt="Kirby using Water Gun"></img>
-      </div>
-      <div class="item-4x KirbyPageBodyText">
-        <img class="KirbyPageImageMedium" src="../images/Hover.png" alt="Kirby can hover"></img>
-      </div>
-      <div class="item-4x KirbyPageBodyText">
-        <h3>Hover</h3>
-        <p>Kirby can inflate himself and flap his arms to hover. Exhaling will cause Kirby to deflate, 
-          and the exhaled air can deal damage!
-        </p>
+      <div id="Hover" class="item-8x tabcontent">
+        <h3 class="AbilityTitle">Hover</h3>
+        <div class="ability">
+          <div class="content">
+            <p>Kirby can inflate himself and flap his arms to hover. Exhaling will cause Kirby to deflate, 
+              and the exhaled air can deal damage!</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/Hover.png" alt="Kirby can hover"></img>
+          </div>
+        </div>
       </div>
       <h2 class="item-8x sectionSubheader">Fun Facts!</h2>
       <div class="item-8x KirbyPageBodyText">
@@ -125,7 +149,30 @@
         <p>"PK Fire!" - Kirby, Super Smash Bros.</p>
       </div>
     </div>
-    </div>
-    </div>
+    <script>
+      function openAbility(evt, abilityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+      
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(abilityName).style.display = "block";
+      evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>
