@@ -1,18 +1,24 @@
+var factHTML;
+var runButton;
+var outputText;
+
+// Carousel
 const config = {
-  type: 'carousel',
+  type: "carousel",
   perView: 3,
   breakpoints: {
     1024: {
-      perView: 2
+      perView: 2,
     },
     600: {
-      perView: 1
-    }
-  }
-}
+      perView: 1,
+    },
+  },
+};
 
 new Glide(".glide", config).mount();
 
+// Ability Tabs
 function openAbility(evt, abilityName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -33,3 +39,9 @@ function openAbility(evt, abilityName) {
   document.getElementById(abilityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+// Fun Facts Generator
+document.addEventListener("DOMContentLoaded", function () {
+  factHTML = document.getElementById("factText");
+  runButton = document.getElementById("runButton");
+});
