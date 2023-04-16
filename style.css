@@ -361,7 +361,8 @@ h3 {
   padding: 6px 12px;
 }
 
-#factText {
+.FactSection {
+  margin-bottom: 25px;
   text-align: center;
 }
 
