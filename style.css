@@ -169,7 +169,6 @@ h3 {
   grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 2vmin;
   padding: 0px 10vmin 0px 10vmin;
-  
 }
 
 .subGridContainer {
@@ -268,12 +267,15 @@ h3 {
   grid-column-end: span 8;
 }
 
+.item-8x button {
+  text-align: center;
+}
+
 .item-4x {
   font-weight: bold;
   grid-column-end: span 4;
   padding-bottom: 25px;
   text-align: center;
-  
 }
 
 .item-9x {
@@ -284,19 +286,21 @@ h3 {
 .item-3x {
   font-weight: bold;
   grid-column-end: span 3;
-  padding-bottom: 25px;
   text-align: center;
-  
 }
 
-.AbilityTitle, .SqueakTitle, .FormTitle {
+.AbilityTitle,
+.SqueakTitle,
+.FormTitle {
   padding-left: 25px;
   padding-bottom: 0px;
   padding-top: 25px;
   margin-bottom: 0px;
 }
 
-.ability, .squeak, .form {
+.ability,
+.squeak,
+.form {
   display: flex;
   justify-content: center;
   padding: 25px;
@@ -355,6 +359,10 @@ h3 {
   border-top: none;
   display: none;
   padding: 6px 12px;
+}
+
+#factText {
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {

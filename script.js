@@ -1,47 +1,32 @@
-var factHTML;
 var runButton;
 var outputText;
 
-// Carousel
-const config = {
-  type: "carousel",
-  perView: 3,
-  breakpoints: {
-    1024: {
-      perView: 2,
-    },
-    600: {
-      perView: 1,
-    },
-  },
-};
-
-new Glide(".glide", config).mount();
-
-// Ability Tabs
-function openAbility(evt, abilityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(abilityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Fun Facts Generator
 document.addEventListener("DOMContentLoaded", function () {
-  factHTML = document.getElementById("factText");
   runButton = document.getElementById("runButton");
+  outputText = document.getElementById("factText");
+
+  runButton.addEventListener("click", fact);
 });
+
+// 1. Write function called "fortune" that will take one argument (visitor's name)
+// and prints a random "fortune teller style" fortune into an element of your page
+function fact() {
+  var facts = [
+    `Kirby is popular in his own universe, but he doesn't let his fame get to his head.`,
+    `Kirby is officially 20 centimeters, or 8 inches, tall.`,
+    `Kirby is boneless. He also has no teeth.`,
+    `Kirby's feet are not shoes.`,
+    `Kirby's stomach is believed to be a black hole. After all, where does he put everything he eats?`,
+    `Kirby has a special title in the Japanese versions of his games, which is Hoshi no Kābī,
+        or "Kirby of the Stars." This is also the name of his theme song.`,
+    `Tomatoes are Kirby's favorite food.`,
+    `Kirby can't read.`,
+    `Kirby even got his own anime! It ran in the early 2000s for a total of 100 episodes.`,
+  ];
+
+  var randomFact = facts[Math.floor(Math.random() * facts.length)];
+
+  outputText.innerHTML = randomFact;
+
+  // console.log(inputText);
+}

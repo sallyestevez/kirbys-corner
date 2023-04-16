@@ -5,6 +5,8 @@
     <title>Kirby!</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../script.js"></script>
+    <script src="../Tabs.js" charset="utf-8"></script>
+
   </head>
   <body>
     <div class="header">
@@ -14,51 +16,6 @@
     </div>
 
     <div class="mainGridContainer">
-      <h1 class="item-8x sectionHeadline">Kirby</h1>
-      <h3 class="item-8x">It's the Super Tuff Pink Puff!</h3>
-      <div class="item-4x KirbyPageBodyText">
-        <p>He's pink. He's round. And he's puffy. He's been on countless
-          adventures, and he's saved his planet, Pop Star, tons of times, too. He can 
-          inhale enemies and gain their powers. He's been around for over thirty years and is loved by all. His games are
-          so sweet that he'll give you a sugar rush. And he's so cute that you can't help 
-          but smile. Do you know his name? It's Kirby!
-        </p>
-      </div>
-      <div class="item-4x">
-        <img class="item-4x wideImage" src="../images/Kirby.png" alt="Kirby">
-      </div>
-
-        <h2 class="item-8x sectionSubheader">Background</h2>
-      <div class="item-8x KirbyPageBodyText">
-        <p>Kirby has been in over 30 games, starting with Kirby's Dream Land in 1992. 
-          Since then, he has starred in Kirby's Adventure (1993), Kirby Super Star (1996), 
-          Kirby Air Ride (2003), Kirby: Planet Robobot (2016), Kirby: Star Allies (2018), 
-          Kirby and the Forgotten Land (2022), and many other titles.
-        </p>
-      </div>
-      <div class="item-8x">
-        <img class="KirbyPageImageLarge" src="../images/Crazy_Mischief_in_the_Stars.png" alt="Kirby with some friends"></img>
-      </div>
-      <div class="item-8x KirbyPageBodyText">
-        <p>Kirby is a cheerful and positive being who cares about those close to him. He is always willing 
-          to help those around him, even going out of his way to do so. He's also very brave, not being 
-          afraid to fight eldritch abominations when necessary. That doesn't mean Kirby isn't forgiving, 
-          as he can become friends with those he's fought in the past. Examples of enemies to friends 
-          include King Dedede, Magolor, Susie, and Meta Knight.
-        </p>
-      </div>
-      <div class="item-4x KirbyPageBodyText">
-        <p>Kirby's favorite things to do are eat and sleep. When he's not busy saving the world from 
-          active threats, he's sleeping. And when he's not sleeping, he's eating.
-        </p>
-      </div>
-      <div class="item-4x">
-        <img class="KirbyPageImageSmall" src="../images/SleepyKirby.png" alt="Sleepy Kirby"></img>
-      </div>
-      <h2 class="item-8x sectionSubheader">Skills and Abilities</h2>
-      <div class="item-8x KirbyPageBodyText">
-        <p>As the Super Tuff Pink Puff, Kirby has many skills! Learn about some of them below!</p>
-      </div>
       <!-- code based on https://www.w3schools.com/howto/howto_js_tabs.asp -->
       <div class="item-8x tab">
         <button class="tablinks" onclick="openAbility(event, 'Inhale')" id="defaultOpen">Inhale</button>
@@ -132,43 +89,8 @@
         </div>
       </div>
       <h2 class="item-8x sectionSubheader">Fun Facts!</h2>
-      <div class="fortuneSection">
-        <h3 id="fortuneText">Click the button for a Kirby fact!</h3>
-        <button id="runButton" onclick="FunFact();">Fun Fact!</button>
-      </div>
-      <!-- <img class="item-8x KirbyPageImageLarge" src="../images/A_Dream_Above_The_Clouds.png" alt="Kirby with some friends"></img> -->
-      <!-- <h2 class="item-8x sectionSubheader">Quotes</h2>
-      <div class="item-8x KirbyPageBodyText">
-        <p>"Hiii!" - Kirby's catchphrase</p>
-        <p>"Lightning Buster!" - Kirby, Super Smash Bros. Ultimate</p>
-        <p>"PK Fire!" - Kirby, Super Smash Bros.</p>
-      </div> -->
+      <h3 class="item-8x" id="factText">Click the button for a random Kirby fact!</h3>
+      <button class="LearnMore item-8x" id="runButton">Fun Fact!</button>
     </div>
-    <script src="Tabs.js" charset="utf-8"></script>
-    <!-- <script>
-      function openAbility(evt, abilityName) {
-      // Declare all variables
-      var i, tabcontent, tablinks;
-      
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(abilityName).style.display = "block";
-      evt.currentTarget.className += " active";
-      }
-
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script> -->
   </body>
 </html>
