@@ -46,36 +46,85 @@
       <div class="item-8x CharacterPageBodyText">
         <p>Dark Nebula has a grand total of four forms: standard, fire, thunder, and ice.</p>
       </div>
-      <h3 class="item-8x sectionSubheader">Standard Form</h3>
-      <div class="item-4x CharacterPageBodyText">
-        <p>This is its default form. There is nothing about it that stands out.</p>
+      <!-- code based on https://www.w3schools.com/howto/howto_js_tabs.asp -->
+      <div class="item-8x tab">
+        <button class="tablinks" onclick="openForm(event, 'Standard')" id="defaultOpen">Standard</button>
+        <button class="tablinks" onclick="openForm(event, 'Fire')">Fire</button>
+        <button class="tablinks" onclick="openForm(event, 'Thunder')">Thunder</button>
+        <button class="tablinks" onclick="openForm(event, 'Ice')">Ice</button>
       </div>
-      <div class="item-4x">
-        <img class="item-4x wideImage" src="../images/StarDreamAccessArk.png" alt="Star Dream fuses with the Access Ark"></img>
+      <div id="Standard" class="item-8x tabcontent">
+        <h3 class="FormTitle">Standard Form</h3>
+        <div class="form">
+          <div class="content">
+            <p>This is its default form. There is nothing about it that stands out (at least when compared to the others).</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/DarkNebula.png" alt="Dark Nebula's standard form"></img>
+          </div>
+        </div>
       </div>
-      <h3 class="item-8x sectionSubheader">Fire</h3>
-      <div class="item-4x CharacterPageBodyText">
-        <p>Dark Nebula transforms into a red star. It shoots stars that can burn Kirby. It can also 
-          attack Kirby by releasing a large fireball that explodes once it reaches the ground.</p>
+      <div id="Fire" class="item-8x tabcontent">
+        <h3 class="FormTitle">Fire Form</h3>
+        <div class="form">
+          <div class="content">
+            <p>Dark Nebula transforms into a red star. It shoots stars that can burn Kirby. It can also 
+              attack Kirby by releasing a large fireball that explodes once it reaches the ground.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/DarkNebula_Fire.png" alt="Dark Nebula's fire form"></img>
+          </div>
+        </div>
       </div>
-      <div class="item-4x">
-        <img class="item-4x wideImage" src="../images/StarDreamAccessArk.png" alt="Star Dream fuses with the Access Ark"></img>
+      <div id="Thunder" class="item-8x tabcontent">
+        <h3 class="FormTitle">Thunder Form</h3>
+        <div class="form">
+          <div class="content">
+            <p>Dark Nebula transforms into a green star. It shoots stars that can shock Kirby. It can attack 
+              Kirby by releasing four electric streams. Dark Nebula can also move around in a zig zag pattern.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/DarkNebula_Thunder.png" alt="Dark Nebula's thunder form"></img>
+          </div>
+        </div>
       </div>
-      <h3 class="item-8x sectionSubheader">Thunder</h3>
-      <div class="item-4x CharacterPageBodyText">
-        <p>Dark Nebula transforms into a green star. It shoots stars that can shock Kirby. It can attack 
-          Kirby by releasing four electric streams. Dark Nebula can also move around in a zig zag pattern.</p>
-      </div>
-      <div class="item-4x">
-        <img class="item-4x wideImage" src="../images/StarDreamAccessArk.png" alt="Star Dream fuses with the Access Ark"></img>
-      </div>
-      <h3 class="item-8x sectionSubheader">Ice</h3>
-      <div class="item-4x CharacterPageBodyText">
-        <p>Dark Nebula transforms into a blue star. It shoots stars that can freeze Kirby. It can attack by firing an ice laser at the ground.</p>
-      </div>
-      <div class="item-4x">
-        <img class="item-4x wideImage" src="../images/StarDreamAccessArk.png" alt="Star Dream fuses with the Access Ark"></img>
+      <div id="Ice" class="item-8x tabcontent">
+        <h3 class="FormTitle">Ice Form</h3>
+        <div class="form">
+          <div class="content">
+            <p>Dark Nebula transforms into a blue star. It shoots stars that can freeze Kirby. It can attack 
+              by firing an ice laser at the ground.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/DarkNebula_Ice.png" alt="Dark Nebula's ice form"></img>
+          </div>
+        </div>
       </div>
     </div>
+    <script>
+      function openForm(evt, formName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+      
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(formName).style.display = "block";
+      evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>

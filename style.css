@@ -260,14 +260,14 @@ h3 {
   text-align: center;
 }
 
-.AbilityTitle, .SqueakTitle {
+.AbilityTitle, .SqueakTitle, .FormTitle {
   padding-left: 25px;
   padding-bottom: 0px;
   padding-top: 25px;
   margin-bottom: 0px;
 }
 
-.ability, .squeak {
+.ability, .squeak, .form {
   display: flex;
   justify-content: center;
   padding: 25px;
