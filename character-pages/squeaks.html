@@ -20,7 +20,7 @@
           in Dream Land.</p>
       </div>
       <div class="item-4x">
-        <img class="item-4x wideImage" src="../images/Star_Dream.png" alt="Star Dream"></img>
+        <img class="item-4x wideImage" src="../images/Squeaks.png" alt="The Squeaks with Kirby"></img>
       </div>
       <h2 class="item-8x sectionSubheader">Story</h2>
       <div class="item-8x CharacterPageBodyText">
@@ -33,30 +33,101 @@
           his strawberry shortcake.</p>
       </div>
       <h2 class="item-8x sectionSubheader">Members</h2>
-      <h3 class="sectionSubheader">Daroach</h3>
       <div class="item-8x CharacterPageBodyText">
-        <p>The leader of the Squeaks. Daroach attacks Kirby with magical powers. He also 
-          gets possessed by Dark Nebula towards the end of the game.</p>
+        <p>Learn who the members of the Squeaks are!</p>
       </div>
-      <h3 class="sectionSubheader">Storo</h3>
-      <div class="item-8x CharacterPageBodyText">
-        <p>The brawn of the group. Storo attacks with brute strength and his large hammer.</p>
+      <!-- code based on https://www.w3schools.com/howto/howto_js_tabs.asp -->
+      <div class="item-8x tab">
+        <button class="tablinks" onclick="openSqueak(event, 'Daroach')" id="defaultOpen">Daroach</button>
+        <button class="tablinks" onclick="openSqueak(event, 'Storo')">Storo</button>
+        <button class="tablinks" onclick="openSqueak(event, 'Spinni')">Spinni</button>
+        <button class="tablinks" onclick="openSqueak(event, 'Doc')">Doc</button>
+        <button class="tablinks" onclick="openSqueak(event, 'Squeakers')">Squeakers</button>
       </div>
-      <h3 class="sectionSubheader">Spinni</h3>
-      <div class="item-8x CharacterPageBodyText">
-        <p>The speed of the group. He wears a cape and throws shurikens at Kirby.</p>
+      <div id="Daroach" class="item-8x tabcontent">
+        <h3 class="SqueakTitle">Daroach</h3>
+        <div class="squeak">
+          <div class="content">
+            <p>The leader of the Squeaks. Daroach attacks Kirby with magical powers. He also 
+          gets possessed by Dark Nebula towards the end of the game. He has his own page!</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/Daroach.png" alt="Daroach"></img>
+          </div>
+        </div>
       </div>
-      <h3 class="sectionSubheader">Doc</h3>
-      <div class="item-8x CharacterPageBodyText">
-        <p>The brains of the group. He appears inside of a UFO. Doc is highly intelligent 
+      <div id="Storo" class="item-8x tabcontent">
+        <h3 class="SqueakTitle">Storo</h3>
+        <div class="squeak">
+          <div class="content">
+            <p>The brawn of the group. Storo attacks with brute strength and his large hammer.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/Storo.png" alt="Daroach"></img>
+          </div>
+        </div>
+      </div>
+      <div id="Spinni" class="item-8x tabcontent">
+        <h3 class="SqueakTitle">Spinni</h3>
+        <div class="squeak">
+          <div class="content">
+            <p>The speed of the group. He wears a cape and throws shurikens at Kirby.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/Spinni.png" alt="Daroach"></img>
+          </div>
+        </div>
+      </div>
+      <div id="Doc" class="item-8x tabcontent">
+        <h3 class="SqueakTitle">Doc</h3>
+        <div class="squeak">
+          <div class="content">
+            <p>The brains of the group. He appears inside of a UFO. Doc is highly intelligent 
           and was the one who built Mecha-Kracko and Yadogaine, two machines that Kirby has 
           to fight.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/Doc.png" alt="Daroach"></img>
+          </div>
+        </div>
       </div>
-      <h3 class="sectionSubheader">Squeakers</h3>
-      <div class="item-8x CharacterPageBodyText">
-        <p>The henchmen of the group. They are the smallest and weakest members of the Squeaks 
+      <div id="Squeakers" class="item-8x tabcontent">
+        <h3 class="SqueakTitle">Squeakers</h3>
+        <div class="squeak">
+          <div class="content">
+            <p>The henchmen of the group. They are the smallest and weakest members of the Squeaks 
           and aren't very dangerous, although some of them can throw bombs.</p>
+          </div>
+          <div class="content">
+            <img class="KirbyPageImageMedium" src="../images/Squeakers.png" alt="Daroach"></img>
+          </div>
+        </div>
       </div>
     </div>
+    <script>
+      function openSqueak(evt, squeakName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+      
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(squeakName).style.display = "block";
+      evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>
