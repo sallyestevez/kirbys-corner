@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Kirby!</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="../script.js"></script>
   </head>
   <body>
     <div class="header">
@@ -36,7 +35,7 @@
           Kirby and the Forgotten Land (2022), and many other titles.
         </p>
       </div>
-      <div class="item-8x">
+      <div class="item-8x" style="margin-bottom: 25px;">
         <img class="KirbyPageImageLarge" src="../images/Crazy_Mischief_in_the_Stars.png" alt="Kirby with some friends"></img>
       </div>
       <div class="item-8x KirbyPageBodyText">
@@ -132,43 +131,26 @@
         </div>
       </div>
       <h2 class="item-8x sectionSubheader">Fun Facts!</h2>
-      <div class="fortuneSection">
-        <h3 id="fortuneText">Click the button for a Kirby fact!</h3>
-        <button id="runButton" onclick="FunFact();">Fun Fact!</button>
+      <div class="item-8x FactSection">
+        <h3 class="item-8x" id="factText">Click the button for a random Kirby fact!</h3>
+      <button class="LearnMore item-8x" id="runButton">Fun Fact!</button>
       </div>
-      <!-- <img class="item-8x KirbyPageImageLarge" src="../images/A_Dream_Above_The_Clouds.png" alt="Kirby with some friends"></img> -->
-      <!-- <h2 class="item-8x sectionSubheader">Quotes</h2>
+      <img class="item-8x KirbyPageImageLarge" src="../images/A_Dream_Above_The_Clouds.png" alt="Kirby with some friends"></img>
+      <h2 class="item-8x sectionSubheader">Quotes</h2>
       <div class="item-8x KirbyPageBodyText">
         <p>"Hiii!" - Kirby's catchphrase</p>
         <p>"Lightning Buster!" - Kirby, Super Smash Bros. Ultimate</p>
         <p>"PK Fire!" - Kirby, Super Smash Bros.</p>
-      </div> -->
-    </div>
-    <script src="Tabs.js" charset="utf-8"></script>
-    <!-- <script>
-      function openAbility(evt, abilityName) {
-      // Declare all variables
-      var i, tabcontent, tablinks;
-      
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(abilityName).style.display = "block";
-      evt.currentTarget.className += " active";
-      }
-
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script> -->
+      </div>
+      <!-- <div class="CommentSection item-8x">
+        <h2 class="item-8x sectionSubheader">Comments</h2>
+        <div class="Comment">
+          <h4>Kirby is so cute! Man, I love that circle.</h4>
+        </div>
+        <textarea name="content" rows="4" cols="50" class="item-8x"></textarea>
+      </div>
+    </div> -->
+    <script src="../Tabs.js" charset="utf-8"></script>
+    <script src="../FactGenerator.js"></script>
   </body>
 </html>

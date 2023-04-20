@@ -28,5 +28,4 @@ function fact() {
 
   outputText.innerHTML = randomFact;
 
-  // console.log(inputText);
 }
