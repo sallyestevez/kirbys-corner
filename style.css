@@ -166,6 +166,13 @@ h3 {
   width: 50%;
 }
 
+.KirbyPageImageMedium {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .mainGridContainer {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -224,6 +231,14 @@ h3 {
 
 .CharacterContentSection {
   background-color: rgba(63, 140, 226, 0.5);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  margin: 20px;
+  padding: 10px 25px 25px 25px;
+}
+
+.CharacterSection {
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
