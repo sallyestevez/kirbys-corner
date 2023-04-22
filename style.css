@@ -227,7 +227,7 @@ h3 {
   margin-bottom: 50px;
 }
 
-.ContentSection, .Comment {
+.ContentSection {
   background-color: rgba(63, 140, 226, 0.5);
   border-radius: 10px;
   margin: 20px;
@@ -242,6 +242,26 @@ h3 {
   margin: 20px;
   padding: 10px 25px 25px 25px;
   /* grid-column-gap: 1vmin; */
+}
+
+.QuizContentSection {
+  background-color: rgba(63, 140, 226, 0.5);
+  border-radius: 10px;
+  margin: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 10px 25px 25px 25px;
+}
+
+.QuizContentSection h3 {
+  text-align: center;
+}
+
+.Questions,
+.ResultsButton {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
 
 .verticalCenter {
