@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   runButton.addEventListener("click", fact);
 });
 
-// 1. Write function called "fortune" that will take one argument (visitor's name)
-// and prints a random "fortune teller style" fortune into an element of your page
 function fact() {
   var facts = [
     `Kirby is popular in his own universe, but he doesn't let his fame get to his head.`,
@@ -27,5 +25,4 @@ function fact() {
   var randomFact = facts[Math.floor(Math.random() * facts.length)];
 
   outputText.innerHTML = randomFact;
-
 }

@@ -157,25 +157,13 @@ h3 {
   width: 150px;
 }
 
-.KirbyPageImageLarge {
-  display: flex;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.KirbyPageImageMedium {
-  display: flex;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+.KirbyPageImageLarge,
+.KirbyPageImageMedium,
 .KirbyPageImageSmall {
   display: flex;
-  width: 50%;
   margin-left: auto;
   margin-right: auto;
+  width: 50%;
 }
 
 .mainGridContainer {
@@ -235,13 +223,12 @@ h3 {
 }
 
 .CharacterContentSection {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
   background-color: rgba(63, 140, 226, 0.5);
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
   margin: 20px;
   padding: 10px 25px 25px 25px;
-  /* grid-column-gap: 1vmin; */
 }
 
 .QuizContentSection {
@@ -258,10 +245,26 @@ h3 {
 }
 
 .Questions,
-.ResultsButton {
+.GetResults {
   display: flex;
+  gap: 5%;
   justify-content: center;
   padding-top: 10px;
+}
+
+.ResultsButton {
+  background-color: #fee35b;
+  border-color: #fee35b;
+  border-radius: 5px;
+  color: #3f48d0;
+  font-family: "Coiny", cursive;
+  font-size: 18px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 200px;
 }
 
 .verticalCenter {
@@ -326,10 +329,10 @@ h3 {
 .AbilityTitle,
 .SqueakTitle,
 .FormTitle {
-  padding-left: 25px;
-  padding-bottom: 0px;
-  padding-top: 25px;
   margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-left: 25px;
+  padding-top: 25px;
 }
 
 .ability,
@@ -337,9 +340,9 @@ h3 {
 .form {
   display: flex;
   justify-content: center;
+  margin: 0px;
   padding: 25px;
   padding-top: 0px;
-  margin: 0px;
 }
 
 .content {
