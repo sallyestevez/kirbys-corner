@@ -250,9 +250,10 @@ h3 {
   background-color: rgba(63, 140, 226, 0.3);
   border-radius: 10px;
   margin: 20px;
-  margin-left: 250px;
-  margin-right: 250px;
+  padding-left: 250px;
+  padding-right: 250px;
   padding: 10px 25px 25px 25px;
+  /* width: 50%; */
 }
 
 .QuizContentSection h3 {
@@ -267,6 +268,7 @@ h3 {
   gap: 5%;
   justify-content: center;
   padding-top: 10px;
+
 }
 
 .GetResults, #quizResult {

@@ -17,12 +17,10 @@ var results;
 var totalScore = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
-
   runButton = document.getElementById("runButton");
   outputText = document.getElementById("quizResult");
 
   runButton.addEventListener("click", QuizResult);
-  reload.addEventListener("click", ReloadPage);
 });
 
 function QuizResult() {
@@ -118,7 +116,7 @@ function QuizResult() {
     totalScore += 1;
   }
 
-  outputText.innerHTML = `<button id="reload" class="ResultsButton">Retake Quiz!</button>`;
+  outputText.innerHTML = `<button onClick="window.location.reload();" class="ResultsButton">Retake Quiz!</button>`;
 
   if (totalScore === 0){
     return ($(".GetResults").append("<h3>You got " + totalScore + " points. I don't think you tried...</3>"));
@@ -134,9 +132,4 @@ function QuizResult() {
     return $(".GetResults").append("<h3>" + " points! You're a Kirby expert!</h3>");
   }
   
-}
-
-function ReloadPage(){
-  window.location.reload();
-  return false;
 }
