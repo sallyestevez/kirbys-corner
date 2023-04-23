@@ -1,7 +1,9 @@
 // Carousel
 const config = {
   type: "carousel",
-  perView: 3,
+  focusAt: 'center',
+  perView: 4,
+  animationDuration: 1500,
   breakpoints: {
     1024: {
       perView: 2,
