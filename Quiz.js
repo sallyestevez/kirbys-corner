@@ -16,6 +16,8 @@ var q15Result;
 var results;
 var totalScore = 0;
 
+document.getElementById('reloadButton').style.display='none';
+
 document.addEventListener("DOMContentLoaded", function () {
   runButton = document.getElementById("runButton");
   outputText = document.getElementById("quizResult");
@@ -26,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function QuizResult() {
   // hide submit button
   document.getElementById('runButton').style.display='none';
+
+  // show reload button
+   document.getElementById('reloadButton').style.display='inline';
+
   // Question 1 math
   q1Result = Number($("input[name='question1']:checked").val());
   if (q1Result == 1) {
@@ -116,7 +122,7 @@ function QuizResult() {
     totalScore += 1;
   }
 
-  outputText.innerHTML = `<button onClick="window.location.reload();" class="ResultsButton">Retake Quiz!</button>`;
+  // outputText.innerHTML = `<button onClick="window.location.reload();" id="reloadButton" class="ResultsButton">Retake Quiz!</button>`;
 
   if (totalScore === 0){
     return ($(".GetResults").append("<h3>You got " + totalScore + " points. I don't think you tried...</3>"));
