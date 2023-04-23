@@ -17,13 +17,17 @@ var results;
 var totalScore = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
+
   runButton = document.getElementById("runButton");
   outputText = document.getElementById("quizResult");
 
   runButton.addEventListener("click", QuizResult);
+  reload.addEventListener("click", ReloadPage);
 });
 
 function QuizResult() {
+  // hide submit button
+  document.getElementById('runButton').style.display='none';
   // Question 1 math
   q1Result = Number($("input[name='question1']:checked").val());
   if (q1Result == 1) {
@@ -114,6 +118,25 @@ function QuizResult() {
     totalScore += 1;
   }
 
-  console.log("total score: ", totalScore);
-  return totalScore;
+  outputText.innerHTML = `<button id="reload" class="ResultsButton">Retake Quiz!</button>`;
+
+  if (totalScore === 0){
+    return ($(".GetResults").append("<h3>You got " + totalScore + " points. I don't think you tried...</3>"));
+  } else if (totalScore === 1){
+    return $(".GetResults").append("<h3>" + totalScore + " point! I think you should play some Kirby games.</h3>");
+  }  else if (totalScore > 1 && totalScore <= 5) {
+    return $(".GetResults").append("<h3>" + totalScore + " points! I think you should play some Kirby games.</h3>");
+  } else if (totalScore > 5 && totalScore <= 10) {
+    return $(".GetResults").append("<h3>You got " + totalScore + " points! You should brush up on your Kirby lore!</h3>");
+  } else if (totalScore > 10 && totalScore <= 14) {
+    return $(".GetResults").append("<h3>So close! You got " + totalScore + " points!</h3>");
+  } else if (totalScore === 15) {
+    return $(".GetResults").append("<h3>" + " points! You're a Kirby expert!</h3>");
+  }
+  
+}
+
+function ReloadPage(){
+  window.location.reload();
+  return false;
 }
