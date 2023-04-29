@@ -19,6 +19,7 @@ function fact() {
     `Tomatoes are Kirby's favorite food.`,
     `Kirby can't read.`,
     `Kirby even got his own anime! It ran in the early 2000s for a total of 100 episodes.`,
+    `Kirby has his own cafe in Japan! The Kirby Cafe sells Kirby-themed treats and meals.`
   ];
 
   var randomFact = facts[Math.floor(Math.random() * facts.length)];
