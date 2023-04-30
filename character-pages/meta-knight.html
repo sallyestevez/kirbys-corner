@@ -32,7 +32,7 @@
       </p>
     </div>
     <div class="item-8x" style="margin-bottom: 25px;">
-      <img class="KirbyPageImageLarge" src="../images/Crazy_Mischief_in_the_Stars.png" alt="Kirby with some friends"></img>
+      <img class="KirbyPageImageLarge" src="../images/MK.png" alt="Meta Knight"></img>
     </div>
     <div class="item-8x KirbyPageBodyText">
       <p>He never reveals his face, except in rare occasions when his mask is broken. 
@@ -49,8 +49,60 @@
     </div>
     <h2 class="item-8x sectionSubheader">Weaponry</h2>
     <div class="item-8x KirbyPageBodyText">
-      <p>Meta Knight's weapon's are fit for a swordsman like him.</p>
+      <p>Meta Knight's weapons are fit for a swordsman like him.</p>
+    </div>
+    <div class="item-8x tab">
+      <button class="tablinks" onclick="openWeapon(event, 'Galaxia')" id="defaultOpen">Galaxia</button>
+      <button class="tablinks" onclick="openWeapon(event, 'Dimensional Cape')">Dimensional Cape</button>
+    </div>
+    <div id="Galaxia" class="item-8x tabcontent">
+      <h3 class="SqueakTitle">Galaxia</h3>
+      <div class="squeak">
+        <div class="content">
+          <p>The legendary sword Galaxia is Meta Knight's signature weapon. It's a golden 
+            blade adorned with a ruby. The sword has spikes coming out of its edges. Galaxia 
+            can be used as a typical sword, and it can also shoot out sword beams.</p>
+        </div>
+        <div class="content">
+          <img style="width: 100px; display: flex; margin-left: auto; margin-right: auto;" src="../images/Galaxia.png" alt="Galaxia"></img>
+        </div>
+      </div>
+    </div>
+    <div id="Dimensional Cape" class="item-8x tabcontent">
+      <h3 class="SqueakTitle">Dimensional Cape</h3>
+      <div class="squeak">
+        <div class="content">
+          <p>With the Dimensional Cape, Meta Knight is able to manipulate space. He can 
+            wrap it around himself to warp and teleport away.</p>
+        </div>
+        <div class="content"></div>
+      </div>
     </div>
     </div>
+    <script>
+      function openWeapon(evt, weaponName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+      
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(weaponName).style.display = "block";
+      evt.currentTarget.className += " active";
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>
