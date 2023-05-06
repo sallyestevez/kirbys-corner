@@ -3,7 +3,7 @@ const config = {
   type: "carousel",
   focusAt: "center",
   perView: 4,
-  animationDuration: 1000,
+  animationDuration: 750,
   autoplay: 2000,
   breakpoints: {
     1024: {
