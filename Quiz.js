@@ -16,7 +16,7 @@ var q15Result;
 var results;
 var totalScore = 0;
 
-document.getElementById('reloadButton').style.display='none';
+document.getElementById("reloadButton").style.display = "none";
 
 document.addEventListener("DOMContentLoaded", function () {
   runButton = document.getElementById("runButton");
@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function QuizResult() {
   // hide submit button
-  document.getElementById('runButton').style.display='none';
+  document.getElementById("runButton").style.display = "none";
 
   // show reload button
-   document.getElementById('reloadButton').style.display='inline';
+  document.getElementById("reloadButton").style.display = "inline";
 
   // Question 1 math
   q1Result = Number($("input[name='question1']:checked").val());
@@ -124,18 +124,35 @@ function QuizResult() {
 
   // outputText.innerHTML = `<button onClick="window.location.reload();" id="reloadButton" class="ResultsButton">Retake Quiz!</button>`;
 
-  if (totalScore === 0){
-    return ($(".GetResults").append("<h3>You got " + totalScore + " points. I don't think you tried...</3>"));
-  } else if (totalScore === 1){
-    return $(".GetResults").append("<h3>" + totalScore + " point! I think you should play some Kirby games.</h3>");
-  }  else if (totalScore > 1 && totalScore <= 5) {
-    return $(".GetResults").append("<h3>" + totalScore + " points! I think you should play some Kirby games.</h3>");
+  if (totalScore === 0) {
+    return $(".GetResults").append(
+      "<h3>You got " + totalScore + " points. I don't think you tried...</3>"
+    );
+  } else if (totalScore === 1) {
+    return $(".GetResults").append(
+      "<h3>" +
+        totalScore +
+        " point! I think you should play some Kirby games.</h3>"
+    );
+  } else if (totalScore > 1 && totalScore <= 5) {
+    return $(".GetResults").append(
+      "<h3>" +
+        totalScore +
+        " points! I think you should play some Kirby games.</h3>"
+    );
   } else if (totalScore > 5 && totalScore <= 10) {
-    return $(".GetResults").append("<h3>You got " + totalScore + " points! You should brush up on your Kirby lore!</h3>");
+    return $(".GetResults").append(
+      "<h3>You got " +
+        totalScore +
+        " points! You should brush up on your Kirby lore!</h3>"
+    );
   } else if (totalScore > 10 && totalScore <= 14) {
-    return $(".GetResults").append("<h3>So close! You got " + totalScore + " points!</h3>");
+    return $(".GetResults").append(
+      "<h3>So close! You got " + totalScore + " points!</h3>"
+    );
   } else if (totalScore === 15) {
-    return $(".GetResults").append("<h3>" + " points! You're a Kirby expert!</h3>");
+    return $(".GetResults").append(
+      "<h3>" + totalScore + " points! You're a Kirby expert!</h3>"
+    );
   }
-  
 }
