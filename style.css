@@ -267,7 +267,8 @@ h3 {
   padding-top: 10px;
 }
 
-.GetResults, #quizResult {
+.GetResults,
+#quizResult {
   color: #291278;
   font-size: 18px;
   font-weight: bold;
@@ -277,7 +278,8 @@ h3 {
   text-align: center;
 }
 
-.Questions1, .Questions2 {
+.Questions1,
+.Questions2 {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -319,6 +321,10 @@ h3 {
 
 .CharacterPageImage {
   max-height: 300px;
+}
+
+.StarAlliesCharacter {
+  max-height: 250px;
 }
 
 .item-2x {
