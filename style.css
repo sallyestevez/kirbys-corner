@@ -365,7 +365,7 @@ h3 {
 
 .AbilityTitle,
 .SqueakTitle,
-.FormTitle {
+.FormTitle, .WeaponTitle, .GameTitle {
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-left: 25px;
@@ -374,7 +374,7 @@ h3 {
 
 .ability,
 .squeak,
-.form {
+.form, .weapon, .game {
   display: flex;
   justify-content: center;
   margin: 0px;
