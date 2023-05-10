@@ -126,33 +126,39 @@ function QuizResult() {
 
   if (totalScore === 0) {
     return $(".GetResults").append(
-      "<h3>You got " + totalScore + " points. I don't think you tried...</3>"
+      "<h3>You got " + totalScore + " points. I don't think you tried...</3>",
+      `<img src="images/kirby1.gif">`
     );
   } else if (totalScore === 1) {
     return $(".GetResults").append(
       "<h3>" +
         totalScore +
-        " point! I think you should play some Kirby games.</h3>"
+        " point! I think you should play some Kirby games.</h3>",
+        `<img src="images/kirby2.gif">`
     );
   } else if (totalScore > 1 && totalScore <= 5) {
     return $(".GetResults").append(
       "<h3>" +
         totalScore +
-        " points! I think you should play some Kirby games.</h3>"
+        " points! I think you should play some Kirby games.</h3>",
+        `<img src="images/kirby2.gif">`
     );
   } else if (totalScore > 5 && totalScore <= 10) {
     return $(".GetResults").append(
       "<h3>You got " +
         totalScore +
-        " points! You should brush up on your Kirby lore!</h3>"
+        " points! You should brush up on your Kirby lore!</h3>",
+        `<img src="images/kirby3.gif">`
     );
   } else if (totalScore > 10 && totalScore <= 14) {
     return $(".GetResults").append(
-      "<h3>So close! You got " + totalScore + " points!</h3>"
+      "<h3>So close! You got " + totalScore + " points!</h3>",
+      `<img src="images/kirby4.gif">`
     );
   } else if (totalScore === 15) {
     return $(".GetResults").append(
-      "<h3>" + totalScore + " points! You're a Kirby expert!</h3>"
+      "<h3>" + totalScore + " points! You're a Kirby expert!</h3>",
+      `<img src="images/kirby5.gif">`
     );
   }
 }

@@ -79,6 +79,18 @@ h3 {
   font-size: 28px;
 }
 
+.footer p {
+  color: #291278;
+  font-family: "Coiny", cursive;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer {
+  padding: 15px;
+  margin-bottom: 0px;
+}
+
 .HomeText p {
   color: #291278;
   font-size: 22px;
