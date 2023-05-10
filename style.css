@@ -13,7 +13,16 @@ html {
 }
 
 body {
-  padding-bottom: 15px;
+  padding-bottom: 25px;
+  cursor: url('images/Star3.png'), auto;
+}
+
+a:hover {
+  cursor: url('images/Star2.png'), auto;
+}
+
+label:hover, button:hover {
+  cursor: url('images/Star.png'), auto;
 }
 
 .header {
