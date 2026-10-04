@@ -23,38 +23,41 @@ function Layout() {
 }
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        {
-          index: true,
-          element: <Home />,
-        },
-        {
-          path: "home",
-          element: <Home />,
-        },
-        {
-          path: "index",
-          element: <Home />,
-        },
-        {
-          path: "games",
-          element: <Games />,
-        },
-        {
-          path: "characters",
-          element: <Characters />,
-        },
-        // {
-        //   path: "quiz",
-        //   element: <Quiz />,
-        // },
-      ],
-    },
-  ]);
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <Layout />,
+        children: [
+          {
+            index: true,
+            element: <Home />,
+          },
+          {
+            path: "home",
+            element: <Home />,
+          },
+          {
+            path: "index",
+            element: <Home />,
+          },
+          {
+            path: "games",
+            element: <Games />,
+          },
+          {
+            path: "characters",
+            element: <Characters />,
+          },
+          // {
+          //   path: "quiz",
+          //   element: <Quiz />
+          // },
+        ],
+      },
+    ],
+    { basename: "/kirbys-corner" },
+  );
   return (
     <div className="App">
       <RouterProvider router={router} />
